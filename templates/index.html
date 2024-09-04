@@ -28,6 +28,7 @@
 
     <script type="text/javascript">
         var my_movies = {{movies|tojson|safe}};
+        console.log(my_movies);
         var recommendURL = "{{ url_for('predict') }}";
     </script>
     
