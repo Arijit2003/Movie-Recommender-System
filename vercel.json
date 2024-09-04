@@ -1,0 +1,25 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "app.py",
+        "use": "@vercel/python"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/favicon.ico",
+        "dest": "app.py"
+      },
+      {
+        "src": "/",
+        "dest": "app.py"
+      },
+      {
+        "src": "/predict",
+        "dest": "app.py",
+        "methods": ["POST"]
+      }
+    ]
+  }
+  
