@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommender System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://kit.fontawesome.com/912429bd8a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1>Hello World</h1>
+
+    <div class="search-box">
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Search any movie" autocomplete="off">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="result-box">
+            
+        </div>
+    </div>
+
+    <div class="recommended-posters">
+        
+    </div>
+
+
+    <script type="text/javascript">
+        var my_movies = {{movies|tojson|safe}};
+        var recommendURL = "{{ url_for('predict') }}";
+    </script>
+    
+    <ul></ul>
+
+    <div class="btn-div" hidden>
+        <button type="button" class="recommend-btn">Recommend</button>
+    </div>
+    
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
