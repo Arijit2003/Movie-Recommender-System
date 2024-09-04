@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Recommender System</title>
 
-<!--     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="https://kit.fontawesome.com/912429bd8a.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -28,7 +28,7 @@
 
     <script type="text/javascript">
         var my_movies = {{movies|tojson|safe}};
-        console.log(my_movies);
+        console.log({{ url_for('static', filename='css/style.css') }});
         var recommendURL = "{{ url_for('predict') }}";
     </script>
     
